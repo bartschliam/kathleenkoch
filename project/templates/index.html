@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+{% block content %}
+<body class="index-page">
+<div class="column is-4 is-offset-4">
+  <div class="has-text-centered">
+    <h1 class="title is-3">
+      {% if not current_user.is_authenticated %}
+      Please create an account or login.
+      {% else %}
+      <a href="https://www.facebook.com/kathleen.koch.796" class="button is-primary" target="_blank">
+        Visit Facebook Profile
+      </a>
+      <a href="https://www.youtube.com/@KathleenKoch" class="button is-danger" target="_blank">
+        Visit YouTube Channel
+      </a>  
+      {% endif %}
+      <br>
+    </h1>
+  </div>
+    <div class="box">
+        {% with messages = get_flashed_messages(with_categories=true) %} 
+          {% for category, message in messages %}
+            {% if category == 'success' %}
+              <div class="notification is-success">{{ message }}</div>
+            {% else %}
+              <div class="notification is-danger">{{ message }}</div>
+            {% endif %}
+          {% endfor %}
+        {% endwith %}
+        
+        {% if not current_user.is_authenticated %}
+          <a href="{{ url_for('auth.signup') }}" class="button is-block is-primary is-large is-halfwidth">Sign Up</a>
+          <br>
+          <a href="{{ url_for('auth.login') }}" class="button is-block is-secondary is-large is-halfwidth">Login</a>
+        {% else %}
+    
+        {% endif %}   
+    </div>
+</div>
+</div>
+{% endblock %}
+</body>

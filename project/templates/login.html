@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+<div class="column is-4 is-offset-4">
+  <h3 class="title">Login</h3>
+  <div class="box has-background-black">
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+      {% for category, message in messages %}
+        {% if category == 'success' %}
+          <div class="notification is-success">{{ message }}</div>
+        {% else %}
+          <div class="notification is-danger">{{ message }}</div>
+        {% endif %}
+      {% endfor %}
+    {% endwith %}
+    <form method="POST" action="/login">
+      <div class="field">
+        <div class="control">
+          <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="" value="{{ email }}" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="input is-large" type="password" name="password" placeholder="Your Password" />
+        </div>
+      </div>
+      <div class="field">
+        <label class="checkbox">
+          <input type="checkbox" name="remember" />Remember me
+        </label>
+      </div>
+      <button class="button is-block is-info is-large is-fullwidth">Login</button>
+    </form>
+    <a class="button is-block is-danger is-medium is-fullwidth" type="button" id="forgot_password" href="/reset_password_request">Forgot Password</a>
+  </div>
+</div>
+{% endblock %}

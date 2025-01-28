@@ -1,0 +1,289 @@
+.hero.is-primary {
+  background-color: #116466; /* Adjust the background color as needed */
+}
+
+.button.is-primary {
+  background-color: #bde9fb;
+  border-color: #00cfff;
+  color: black;
+}
+.button.is-primary:hover {
+  background-color: #9ccce3;
+  color: rgb(69, 47, 47);
+}
+
+.button.is-secondary {
+  background-color: #5e646c;
+  color: white;
+}
+
+.button.is-secondary:hover {
+  background-color: #5a5e68;
+  color: white;
+}
+
+footer {
+  background-color: #9ccce3; /* Match the background color of the hero section or your site's color scheme */
+  padding: 20px; /* Add padding to space out content */
+  text-align: center; /* Center text */
+  position: relative; /* Ensures footer is positioned in normal flow */
+  width: 100%; /* Full width of the container */
+}
+
+/* Index / Home  */
+.navbar-item.top-left-text {
+  font-size: 30px; /* Adjust the font size as needed */
+}
+
+/*  delete  */
+.space-between {
+  margin-bottom: 10px;
+}
+
+/*  application_installer  */
+.radio-label {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3%;
+}
+
+/*  pricing  */
+
+#cancel-button {
+  background-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 20%;
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.price {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #a1e8dd;
+}
+
+.price.highlight {
+  background-color: #f0e68c;
+  border: 2px solid #ff4500;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price.highlight .header {
+  background-color: #ff4500; /* Orange header background */
+  color: white; /* White text color */
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  color: black;
+}
+
+.price .grey {
+  background-color: white;
+  font-size: 20px;
+}
+
+.price.highlight li.grey {
+  color: #333; /* Dark grey text color */
+}
+
+.button {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 2px;
+  word-wrap: break-word;
+  height: auto;
+}
+
+.room-grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}
+
+.room-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center grid items horizontally */
+}
+
+.row {
+  display: flex;
+  justify-content: center; /* Center the row items */
+}
+
+.grid-item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty {
+  background-color: lightgrey;
+}
+
+.circular-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.circular-button:hover {
+  background-color: darkblue; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+/* Reserved desk styling */
+.reserved {
+  background-color: red; /* Background color for reserved desks */
+}
+
+.desk {
+  background-color: lightgreen; /* Default color for desks */
+}
+
+.circular-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: blue;
+  color: white;
+  position: relative;
+}
+
+.circular-button:hover::after {
+  content: attr(test);
+  position: absolute;
+  bottom: 120%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: pre-line; /* Prevent line breaks */
+  font-size: 12px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: block;
+  width: 250px;
+}
+
+.circular-button:hover::after {
+  opacity: 1;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: black;
+  margin: 10% auto; /* Adjusted margin */
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto; /* Adjust width to content */
+  max-width: 500px; /* Set max-width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+
+.close-button {
+  color: #888; /* Changed color */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+  color: black; /* Changed hover color */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Added gap */
+}
+
+label {
+  font-weight: bold; /* Added font-weight */
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusts spacing between buttons */
+  gap: 10px; /* Optional: Adds space between buttons */
+}
+
+.button-grid .button {
+  flex: 0 0 calc(50% - 10px); /* Makes each button take 50% width minus gap */
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+.toggle-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3; /* Darker on hover */
+}

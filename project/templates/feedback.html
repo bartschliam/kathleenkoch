@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %} 
+    {% for category, message in messages %}
+    {% if category == 'success' %}
+        <div class="notification is-success">{{ message }}</div>
+    {% else %}
+        <div class="notification is-danger">{{ message }}</div>
+    {% endif %}
+    {% endfor %}
+{% endwith %}
+<div class="column is-6 is-offset-3">
+<h3 class="title">Feedback</h3>
+    <div class="box has-background-black">
+        <form method="POST" action="/feedback" enctype="multipart/form-data">
+            <div id="feedback_container">
+                <fieldset id="feedback_fields">
+                        <div id="inputs">
+                            <input class="input is-large" type="text" name="name" placeholder="Name" required autofocus=""/>
+                            <input class="input is-large" type="email" name="email_address" placeholder="Email Address" required/>
+                            <textarea class="textarea is-large" type="text" name="feedback" placeholder="Feedback" required></textarea>
+                        </div>
+                </fieldset>
+            </div>
+            <button id='submit_form' class="button is-block is-info is-large is-fullwidth">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
