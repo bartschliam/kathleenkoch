@@ -11,46 +11,23 @@
       margin: 0 auto;
     "
   >
-    <!-- Art Photo 1 -->
+    {% for i in range(18) %}
+    <!-- Art Photo -->
     <div style="text-align: center">
-      <img
-        src="{{ url_for('static', filename='images/art1.jpg') }}"
-        alt="Art 1"
-        style="width: 100%; border-radius: 8px"
-      />
-      <p style="margin-top: 0.5rem">Art Title 1</p>
+      <a
+        href="{{ url_for('static', filename='images/' ~ (i + 1) ~ '.jpeg') }}"
+        target="_blank"
+        style="display: inline-block"
+      >
+        <img
+          src="{{ url_for('static', filename='images/' ~ (i + 1) ~ '.jpeg') }}"
+          alt="Art {{ i + 1 }}"
+          style="width: 100%; border-radius: 8px"
+        />
+      </a>
+      <p style="margin-top: 0.5rem">Art Title {{ i + 1 }}</p>
     </div>
-
-    <!-- Art Photo 2 -->
-    <div style="text-align: center">
-      <img
-        src="{{ url_for('static', filename='images/art2.jpg') }}"
-        alt="Art 2"
-        style="width: 100%; border-radius: 8px"
-      />
-      <p style="margin-top: 0.5rem">Art Title 2</p>
-    </div>
-
-    <!-- Art Photo 3 -->
-    <div style="text-align: center">
-      <img
-        src="{{ url_for('static', filename='images/art3.jpg') }}"
-        alt="Art 3"
-        style="width: 100%; border-radius: 8px"
-      />
-      <p style="margin-top: 0.5rem">Art Title 3</p>
-    </div>
-
-    <!-- Art Photo 4 -->
-    <div style="text-align: center">
-      <img
-        src="{{ url_for('static', filename='images/art4.jpg') }}"
-        alt="Art 4"
-        style="width: 100%; border-radius: 8px"
-      />
-      <p style="margin-top: 0.5rem">Art Title 4</p>
-    </div>
-
+    {% endfor %}
     <!-- Add more photos as needed -->
   </div>
 </div>
