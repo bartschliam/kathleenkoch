@@ -79,7 +79,9 @@ def profile():
         return redirect(url_for('profile'))
     return render_template('profile.html', user=current_user)
 
-
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
