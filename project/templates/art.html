@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block content %}
+<div style="text-align: center; margin-top: 2rem">
+  <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem">Art Gallery</h1>
+
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    "
+  >
+    <!-- Art Photo 1 -->
+    <div style="text-align: center">
+      <img
+        src="{{ url_for('static', filename='images/art1.jpg') }}"
+        alt="Art 1"
+        style="width: 100%; border-radius: 8px"
+      />
+      <p style="margin-top: 0.5rem">Art Title 1</p>
+    </div>
+
+    <!-- Art Photo 2 -->
+    <div style="text-align: center">
+      <img
+        src="{{ url_for('static', filename='images/art2.jpg') }}"
+        alt="Art 2"
+        style="width: 100%; border-radius: 8px"
+      />
+      <p style="margin-top: 0.5rem">Art Title 2</p>
+    </div>
+
+    <!-- Art Photo 3 -->
+    <div style="text-align: center">
+      <img
+        src="{{ url_for('static', filename='images/art3.jpg') }}"
+        alt="Art 3"
+        style="width: 100%; border-radius: 8px"
+      />
+      <p style="margin-top: 0.5rem">Art Title 3</p>
+    </div>
+
+    <!-- Art Photo 4 -->
+    <div style="text-align: center">
+      <img
+        src="{{ url_for('static', filename='images/art4.jpg') }}"
+        alt="Art 4"
+        style="width: 100%; border-radius: 8px"
+      />
+      <p style="margin-top: 0.5rem">Art Title 4</p>
+    </div>
+
+    <!-- Add more photos as needed -->
+  </div>
+</div>
+{% endblock %}

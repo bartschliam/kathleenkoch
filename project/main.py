@@ -83,6 +83,10 @@ def profile():
 def about():
     return render_template('about.html')
 
+@app.route('/art', methods=['GET', 'POST'])
+def art():
+    return render_template('art.html')
+
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
     if request.method == 'POST':
