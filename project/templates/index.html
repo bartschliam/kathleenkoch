@@ -8,12 +8,6 @@
       Please create an account or login.
       {% else %}
       {% endif %}
-      <a href="https://www.facebook.com/kathleen.koch.796" class="button is-primary" target="_blank">
-        Visit Facebook Profile
-      </a>
-      <a href="https://www.youtube.com/@KathleenKoch" class="button is-danger" target="_blank">
-        Visit YouTube Channel
-      </a>  
       <br>
     </h1>
   </div>
@@ -33,8 +27,14 @@
           <br>
           <a href="{{ url_for('auth.login') }}" class="button is-block is-secondary is-large is-halfwidth">Login</a>
         {% else %}
-    
-        {% endif %}   
+
+        {% endif %} 
+        <a href="https://www.facebook.com/kathleen.koch.796" class="button is-primary" target="_blank">
+          Visit Facebook Profile
+        </a>
+        <a href="https://www.youtube.com/@KathleenKoch" class="button is-danger" target="_blank">
+          Visit YouTube Channel
+        </a>    
     </div>
 </div>
 </div>
